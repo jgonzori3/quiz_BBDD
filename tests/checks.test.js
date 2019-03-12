@@ -92,8 +92,7 @@ describe("CORE19-04_quiz_bbdd", function () {
                 fs.copySync(quizzes_orig, quizzes_back, {"overwrite": true});
                 fs.copySync(quizzes_test, quizzes_orig, {"overwrite": true});
             } catch (e) {
-                error_deps = e;
-            }
+               }
             if (error_deps) {
                 this.msg_err = "Error copying the answers file: " + error_deps;
                 error_critical = this.msg_err;
