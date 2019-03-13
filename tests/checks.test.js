@@ -88,8 +88,8 @@ describe("CORE19-04_quiz_bbdd", function () {
 
             // replace answers file
             let error_deps;
+            try {fs.copySync(quizzes_orig, quizzes_back, {"overwrite": true});} catch (e){{}}
             try {
-                fs.copySync(quizzes_orig, quizzes_back, {"overwrite": true});
                 fs.copySync(quizzes_test, quizzes_orig, {"overwrite": true});
             } catch (e) {
                }
